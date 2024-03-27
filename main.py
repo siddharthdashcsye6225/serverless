@@ -9,12 +9,12 @@ from datetime import datetime
 # Define your FastAPI endpoint URL
 FASTAPI_ENDPOINT = "http://siddharthdash.me:8000/v1/user/verification"
 # SQL configuration
-SQL_INSTANCE_IP = "10.251.0.2"  # Replace with your SQL instance IP address
-SQL_INSTANCE_PORT = 5432  # Replace with your SQL instance port
-SQL_DB_NAME = "webapp"  # Replace with your database name
-SQL_TABLE_NAME = "verification"  # Replace with your verification table name
-SQL_USER = "webapp"  # Replace with your SQL user
-SQL_PASSWORD = "UcXfm7yEy2tl05WP"  # Replace with your SQL password
+SQL_INSTANCE_IP = os.environ['DB_HOST']  
+SQL_INSTANCE_PORT = 5432  
+SQL_DB_NAME = os.environ['DB_NAME'] 
+SQL_TABLE_NAME = "verification"  
+SQL_USER = os.environ['DB_USER']  
+SQL_PASSWORD = os.environ['DB_PASS']  
 
 def send_verification_email(email, verification_link):
     # Here you can use any email service provider like Mailgun, SendGrid, etc.
