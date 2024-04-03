@@ -7,7 +7,7 @@ import psycopg2
 from datetime import datetime
 
 # Define your FastAPI endpoint URL
-FASTAPI_ENDPOINT = "http://siddharthdash.me:8000/v1/user/verification"
+FASTAPI_ENDPOINT = "https://siddharthdash.me/v1/user/verification"
 # SQL configuration
 SQL_INSTANCE_IP = os.environ['DB_HOST']  
 SQL_INSTANCE_PORT = 5432  
